@@ -128,8 +128,8 @@ router.post('/addUserInfo', function (req, res, next) {
             if (err) {
                 resData.code = 5;
                 resData.errorReason = RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION;
-                // res.send(resData);
-                res.send(err)
+                res.send(resData);
+                // res.send(err)
             }
             else {
                 res.send('success');
