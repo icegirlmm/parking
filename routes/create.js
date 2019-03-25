@@ -33,7 +33,7 @@ router.post('/password', function (req, res, next) {
                 }, {
                     $set: {
                         userId: userId,
-                        password: password,
+                        Password: password,
                     }
                 },
                 function (err, doc) {
