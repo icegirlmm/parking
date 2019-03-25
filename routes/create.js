@@ -18,6 +18,7 @@ router.post('/password', function (req, res, next) {
     var param = req.body;
     var userId = param.userId;
     var password = param.password;
+    console.log(password)
     PasswordModel.findOne({
         userId: userId
     }, function (err, doc) {
@@ -50,7 +51,7 @@ router.post('/password', function (req, res, next) {
             var userEntity;
             userEntity = new PasswordModel({
                 userId: userId,
-                password: password
+                Password: password
             })
             userEntity.save(function (err, doc) {
                 if (err) {
