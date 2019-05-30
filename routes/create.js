@@ -34,7 +34,7 @@ router.post('/password', function (req, res, next) {
                 }, {
                     $set: {
                         userId: userId,
-                        Password: password,
+                        password: password,
                     }
                 },
                 function (err, doc) {
@@ -51,7 +51,7 @@ router.post('/password', function (req, res, next) {
             var userEntity;
             userEntity = new PasswordModel({
                 userId: userId,
-                Password: password
+                password: password
             })
             userEntity.save(function (err, doc) {
                 if (err) {
